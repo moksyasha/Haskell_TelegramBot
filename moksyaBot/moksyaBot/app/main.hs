@@ -357,6 +357,10 @@ handler action model = case action of
 
 main :: IO ()
 main = do
-  env <- Telegram.defaultTelegramClientEnv "1779930678:AAHJaHhclY0zrKcBb9vkSaPk2YgCPltqrH8"
+  env <- Telegram.defaultTelegramClientEnv "1779930678:
+  AAHJaHhclY0zrKcBb
+  9vkSaPk2Yg
+  CPltqrH
+  8"
   moksyaBot <- initialBot
   startBot_ (useLatestUpdateInJobs (traceBotDefault moksyaBot)) env
