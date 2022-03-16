@@ -1,0 +1,153 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 21ba82f9535992142ec2f52c37abc6d9ea2158fa6ded168749d04ae6c463dd67
+
+name:           moksyaBot
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/moksyaBot#readme>
+homepage:       https://github.com/githubuser/moksyaBot#readme
+bug-reports:    https://github.com/githubuser/moksyaBot/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/moksyaBot
+ 
+library
+  exposed-modules:
+      Lib
+      Telegram.Bot.API
+      Telegram.Bot.API.Chat
+      Telegram.Bot.API.Games
+      Telegram.Bot.API.GettingUpdates
+      Telegram.Bot.API.InlineMode
+      Telegram.Bot.API.Internal.Utils
+      Telegram.Bot.API.MakingRequests
+      Telegram.Bot.API.Methods
+      Telegram.Bot.API.Payments
+      Telegram.Bot.API.Stickers
+      Telegram.Bot.API.Types
+      Telegram.Bot.API.UpdatingMessages
+      Telegram.Bot.Simple
+      Telegram.Bot.Simple.BotApp
+      Telegram.Bot.Simple.BotApp.Internal
+      Telegram.Bot.Simple.Conversation
+      Telegram.Bot.Simple.Debug
+      Telegram.Bot.Simple.Eff
+      Telegram.Bot.Simple.InlineKeyboard
+      Telegram.Bot.Simple.Reply
+      Telegram.Bot.Simple.UpdateParser
+  other-modules:
+      Paths_moksyaBot
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      aeson
+    , aeson-pretty
+    , base >=4.9 && <5
+    , bytestring
+    , cron >=0.7.0
+    , filepath
+    , hashable
+    , http-api-data
+    , http-client
+    , http-client-tls
+    , monad-control
+    , mtl
+    , pretty-show
+    , profunctors
+    , servant
+    , servant-client
+    , servant-multipart
+    , split
+    , stm
+    , template-haskell
+    , text
+    , time
+    , transformers
+    , unordered-containers
+  default-language: Haskell2010
+
+executable moksyaBot-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_moksyaBot
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , aeson-pretty
+    , base >=4.9 && <5
+    , bytestring
+    , cron >=0.7.0
+    , filepath
+    , hashable
+    , http-api-data
+    , http-client
+    , http-client-tls
+    , moksyaBot
+    , monad-control
+    , mtl
+    , pretty-show
+    , profunctors
+    , servant
+    , servant-client
+    , servant-multipart
+    , split
+    , stm
+    , template-haskell
+    , text
+    , time
+    , transformers
+    , unordered-containers
+  default-language: Haskell2010
+
+test-suite moksyaBot-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_moksyaBot
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , aeson-pretty
+    , base >=4.9 && <5
+    , bytestring
+    , cron >=0.7.0
+    , filepath
+    , hashable
+    , http-api-data
+    , http-client
+    , http-client-tls
+    , moksyaBot
+    , monad-control
+    , mtl
+    , pretty-show
+    , profunctors
+    , servant
+    , servant-client
+    , servant-multipart
+    , split
+    , stm
+    , template-haskell
+    , text
+    , time
+    , transformers
+    , unordered-containers
+  default-language: Haskell2010

@@ -1,0 +1,74 @@
+name:                moksyaBot
+version:             0.1.0.0
+github:              "githubuser/moksyaBot"
+license:             BSD3
+author:              "moksyasha"
+maintainer:          "example@example.com"
+copyright:           "2021 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/moksyaBot#readme>
+
+dependencies:
+- base >= 4.9 && <5
+- aeson
+- aeson-pretty
+- bytestring
+- cron >= 0.7.0
+- filepath
+- hashable
+- http-api-data
+- http-client
+- http-client-tls
+- monad-control
+- mtl
+- profunctors
+- pretty-show
+- servant
+- servant-client
+- servant-multipart
+- split
+- stm
+- template-haskell
+- text
+- time
+- transformers
+- unordered-containers
+
+ghc-options:
+- -Wall
+
+library:
+  source-dirs: src
+
+executables:
+  moksyaBot-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - moksyaBot
+
+tests:
+  moksyaBot-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - moksyaBot
